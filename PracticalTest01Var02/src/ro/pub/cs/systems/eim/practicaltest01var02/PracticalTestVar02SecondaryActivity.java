@@ -4,14 +4,25 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class PracticalTestVar02SecondaryActivity extends Activity {
 
+	TextView t1;
+	TextView t2;
+	TextView t3;
+	TextView t4;
+	
+	
+	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_practical_test_var02_secondary);
 	}
+		
+
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
