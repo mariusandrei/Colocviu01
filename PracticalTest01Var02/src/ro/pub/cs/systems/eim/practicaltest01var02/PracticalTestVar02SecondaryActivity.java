@@ -1,6 +1,7 @@
 package ro.pub.cs.systems.eim.practicaltest01var02;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,12 +15,24 @@ public class PracticalTestVar02SecondaryActivity extends Activity {
 	TextView t4;
 	
 	
+
 	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_practical_test_var02_secondary);
+		
+		t1 = (TextView)  findViewById(R.id.neditText1);
+		Intent intent = getIntent();
+		
+		if(intent != null && intent.getExtras().containsKey("tag1"))
+		{
+			int asdf = intent.getIntExtra("tag1",-1);
+			
+			t1.setText(String.valueOf(asdf));
+		}
+		
 	}
 		
 
